@@ -95,7 +95,6 @@ main()
 #endif
     Tcl_InitDebug (interp);
     TclX_InitGeneral (interp);
-    Tcl_InitReaddir (interp);
 
     Tcl_CreateCommand(interp, "echo", cmdEcho, (ClientData) "echo",
 	    (Tcl_CmdDeleteProc *) NULL);
