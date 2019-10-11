@@ -165,8 +165,4 @@ TclX_InitGeneral (interp)
 
     Tcl_CreateCommand (interp, "loop", Tcl_LoopCmd, 
                        (ClientData)NULL, NULL);
-
-    return TCL_OK;
 }
-
-
