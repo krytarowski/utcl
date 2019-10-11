@@ -65,7 +65,6 @@
 #    include <sys/times.h>
 #endif 
 
-#include <values.h>
 /* #include <grp.h> */
 /*
  * On some systems this is not included by tclUnix.h.
