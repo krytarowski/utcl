@@ -22,6 +22,8 @@
 #include "tclInt.h"
 #include "tclUnix.h"
 
+#include <unistd.h>
+
 /*
  * The variable below caches the name of the current working directory
  * in order to avoid repeated calls to getwd.  The string is malloc-ed.
