@@ -29,41 +29,6 @@ All filenames in the Tiny Tcl source tree are DOS "8.3" compliant.
 The build environment is assumed to be DOS or Windows.  You can run tiny
 tcl in a DOS window under Windows while developing, if you like.
 
-DOS INTERFACE FUNCTIONS
-
-dos.c adds the following commands
-
-    bios_memsize
-    bios_equiplist
-    com
-    kbhit
-    getkey
-    sound
-    rawclock
-    getdate
-    setdate
-    gettime
-    settime
-    diskfree
-    getfat
-    getdfree
-    drive
-    memfree
-    stackfree
-    wait
-    gotoxy
-    cls
-    getverify
-    heapcheck
-    mkdir
-    unlink
-    execvp
-    video
-
-To remove these, remove the call to Tcl_InitDos from tinytcl.c and
-take dos.c out of the makefile and tlib.rsp file.
-
-
 BUILDING GENERIC ONLY
 
 If you build with TCL_GENERIC_ONLY defined, you'll get a Tcl without
