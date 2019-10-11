@@ -19,7 +19,7 @@
  */
 
 #include "tclInt.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 /*
  * The following structure defines all of the commands in the Tcl core,
