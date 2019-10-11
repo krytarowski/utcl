@@ -21,7 +21,6 @@
 
 #include "tclExtend.h"
 #include "tclInt.h"
-#include "tclDos.h"
 /* #include <sys/param.h> */
 
 

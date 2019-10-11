@@ -24,9 +24,6 @@
 #define TRUE	1
 
 #ifdef TCL_MEM_DEBUG
-#ifndef TCL_GENERIC_ONLY
-#include "tclDos.h"
-#endif
 
 #define GUARD_SIZE 8
 

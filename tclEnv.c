@@ -17,7 +17,6 @@
  */
 
 #include "tclInt.h"
-#include "tclDos.h"
 
 #define environ _environ
 
