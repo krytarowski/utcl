@@ -23,8 +23,6 @@
 #include <stdlib.h>
 #include "tcl.h"
 
-#include <alloc.h>
-
 Tcl_Interp *interp;
 Tcl_CmdBuf buffer;
 char dumpFile[100];
