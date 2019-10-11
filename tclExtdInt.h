@@ -372,6 +372,9 @@ Tcl_EchoCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
 extern int 
 Tcl_InfoxCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
 
+extern void
+TclX_InitGeneral _ANSI_ARGS_((Tcl_Interp *interp));
+
 extern int 
 Tcl_LoopCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
 
