@@ -18,6 +18,7 @@
 
 #include "tclInt.h"
 #include "tclUnix.h"
+#include <pwd.h>
 
 /*
  * The structure below is used to keep track of a globbing result
