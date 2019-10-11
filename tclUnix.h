@@ -62,7 +62,7 @@
 #define TCL_SYS_TIME_H 0
 #define TCL_SYS_WAIT_H 0
 #define TCL_UNION_WAIT 0
-#define TCL_PID_T 0
+#define TCL_PID_T 1
 #define TCL_UID_T 1
 
 #include <errno.h>
@@ -83,16 +83,6 @@
 #if TCL_SYS_WAIT_H
 /* #   include <sys/wait.h> */
 #endif
-
-/*
- * Not all systems declare the errno variable in errno.h. so this
- * file does it explicitly.  The list of system error messages also
- * isn't generally declared in a header file anywhere.
- */
-
-extern int errno;
-extern int sys_nerr;
-/* extern char *sys_errlist[]; */
 
 /*
  * The type of the status returned by wait varies from UNIX system
