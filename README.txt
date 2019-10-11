@@ -14,17 +14,6 @@ Still, major applications have been written in Tcl 6.
 Excluding C library functions, Tiny Tcl compiles down to less than 60 Kbytes
 on most machines, far smaller than any Tcl 7 or Tcl 8 derivatives.
 
-COMPILER AND BUILD ENVIRONMENT
-
-The compiler is assumed to be Borland C 5.0.  Earlier versions should work.
-More recent Borland and Microsoft compilers can no longer create DOS 
-executables, and are thus pretty much Windows-only tools.
-
-All filenames in the Tiny Tcl source tree are DOS "8.3" compliant.
-
-The build environment is assumed to be DOS or Windows.  You can run tiny
-tcl in a DOS window under Windows while developing, if you like.
-
 BUILDING GENERIC ONLY
 
 If you build with TCL_GENERIC_ONLY defined, you'll get a Tcl without
