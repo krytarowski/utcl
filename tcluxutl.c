@@ -25,6 +25,10 @@
 #include "tclInt.h"
 #include "tclUnix.h"
 
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
 /*
  * Data structures of the following type are used by Tcl_Fork and
  * Tcl_WaitPids to keep track of child processes.
