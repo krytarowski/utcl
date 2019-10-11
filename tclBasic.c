@@ -975,21 +975,19 @@ Tcl_AddErrorInfo(interp, message)
 	/* VARARGS2 */ /* ARGSUSED */
 int
 #ifndef lint
-Tcl_VarEval(va_alist)
+Tcl_VarEval(Tcl_Interp *interp, ...)
 #else
 Tcl_VarEval(iPtr, p, va_alist)
     Tcl_Interp *iPtr;		/* Interpreter in which to execute command. */
     char *p;			/* One or more strings to concatenate,
 				 * terminated with a NULL string. */
 #endif
-    va_dcl
 {
     va_list argList;
 #define FIXED_SIZE 200
     char fixedSpace[FIXED_SIZE+1];
     int spaceAvl, spaceUsed, length;
     char *string, *cmd;
-    Tcl_Interp *interp;
     int result;
 
     /*
@@ -999,8 +997,7 @@ Tcl_VarEval(iPtr, p, va_alist)
      * space.
      */
 
-    va_start(argList);
-    interp = va_arg(argList, Tcl_Interp *);
+    va_start(argList, interp);
     spaceAvl = FIXED_SIZE;
     spaceUsed = 0;
     cmd = fixedSpace;

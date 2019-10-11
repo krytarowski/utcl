@@ -378,8 +378,7 @@ EXTERN void		Tcl_UntraceVar _ANSI_ARGS_((Tcl_Interp *interp,
 EXTERN void		Tcl_UntraceVar2 _ANSI_ARGS_((Tcl_Interp *interp,
 			    char *part1, char *part2, int flags,
 			    Tcl_VarTraceProc *proc, ClientData clientData));
-EXTERN int		Tcl_VarEval _ANSI_ARGS_(
-				VARARGS);
+EXTERN int		Tcl_VarEval _ANSI_ARGS_((Tcl_Interp *, ...));
 EXTERN ClientData	Tcl_VarTraceInfo _ANSI_ARGS_((Tcl_Interp *interp,
 			    char *varName, int flags,
 			    Tcl_VarTraceProc *procPtr,
@@ -392,5 +391,3 @@ EXTERN int		Tcl_WaitPids _ANSI_ARGS_((int numPids, int *pidPtr,
 			    int *statusPtr));
 
 #endif /* _TCL */
-
-
