@@ -14,10 +14,6 @@ Still, major applications have been written in Tcl 6.
 Excluding C library functions, Tiny Tcl compiles down to less than 60 Kbytes
 on most machines, far smaller than any Tcl 7 or Tcl 8 derivatives.
 
-This version of Tiny Tcl includes support for MS-DOS and DOS workalikes.
-The code for interfacing to DOS can be found in the files that have DOS
-in the filename, like tcldosaz.c, tcldosgl.c, tcldosut.c and dos.c.
-
 COMPILER AND BUILD ENVIRONMENT
 
 The compiler is assumed to be Borland C 5.0.  Earlier versions should work.
