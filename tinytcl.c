@@ -22,6 +22,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "tcl.h"
+#include "tclExtdInt.h"
 
 Tcl_Interp *interp;
 Tcl_CmdBuf buffer;
