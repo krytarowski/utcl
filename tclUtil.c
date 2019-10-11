@@ -17,7 +17,7 @@
  */
 
 #include "tclInt.h"
-#include <varargs.h>
+#include <stdarg.h>
 
 /*
  * The following values are used in the flags returned by Tcl_ScanElement
