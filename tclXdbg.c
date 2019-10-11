@@ -79,7 +79,7 @@ CleanUpDebug _ANSI_ARGS_((ClientData clientData));
  *
  *-----------------------------------------------------------------------------
  */
-static void
+void
 PrintStr (filePtr, string, numChars)
     FILE *filePtr;
     char *string;
@@ -108,7 +108,7 @@ PrintStr (filePtr, string, numChars)
  *
  *-----------------------------------------------------------------------------
  */
-static void
+void
 PrintArg (filePtr, argStr, noTruncate)
     FILE *filePtr;
     char *argStr;
@@ -146,7 +146,7 @@ PrintArg (filePtr, argStr, noTruncate)
  * 
  *-----------------------------------------------------------------------------
  */
-static void
+void
 TraceCode (traceInfoPtr, level, command, argc, argv)
     traceInfo_pt traceInfoPtr;
     int          level;
@@ -192,7 +192,7 @@ TraceCode (traceInfoPtr, level, command, argc, argv)
  *
  *-----------------------------------------------------------------------------
  */
-static void
+void
 CmdTraceRoutine (clientData, interp, level, command, cmdProc, cmdClientData, 
                  argc, argv)
     ClientData    clientData;
@@ -364,7 +364,7 @@ invalidOption:
  *
  *-----------------------------------------------------------------------------
  */
-static void
+void
 CleanUpDebug (clientData)
     ClientData clientData;
 {
@@ -403,5 +403,3 @@ Tcl_InitDebug (interp)
     Tcl_CreateCommand (interp, "cmdtrace", Tcl_CmdtraceCmd, 
                        (ClientData)infoPtr, CleanUpDebug);
 }
-
-
