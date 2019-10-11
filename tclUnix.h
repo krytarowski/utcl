@@ -299,7 +299,6 @@ extern int	open	   _ANSI_ARGS_((CONST char *path, int flags, ...));
 #endif
 extern int	pipe	   _ANSI_ARGS_((int *fdPtr));
 /* extern int	read	   _ANSI_ARGS_((int fd, char *buf, int numBytes)); */
-extern int	readlink   _ANSI_ARGS_((CONST char *path, char *buf, int size));
 extern int	unlink 	   _ANSI_ARGS_((CONST char *path));
 /* extern int	write	   _ANSI_ARGS_((int fd, char *buf, int numBytes)); */
 #endif /* _CRAY */
