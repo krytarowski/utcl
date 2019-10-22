@@ -1255,7 +1255,7 @@ Tcl_ResetResult(interp)
 	/* VARARGS2 */
 #ifndef lint
 void
-Tcl_SetErrorCode(va_alist)
+Tcl_SetErrorCode(Tcl_Interp *interp, ...)
 #else
 void
 	/* VARARGS2 */ /* ARGSUSED */
@@ -1265,20 +1265,20 @@ Tcl_SetErrorCode(interp, p, va_alist)
     char *p;			/* One or more elements to add to errorCode,
 				 * terminated with NULL. */
 #endif
-    va_dcl
 {
     va_list argList;
     char *string;
     int flags;
     Interp *iPtr;
 
+    iPtr = (Interp *) interp;
+
     /*
      * Scan through the arguments one at a time, appending them to
      * $errorCode as list elements.
      */
 
-    va_start(argList);
-    iPtr = va_arg(argList, Interp *);
+    va_start(argList, interp);
     flags = TCL_GLOBAL_ONLY | TCL_LIST_ELEMENT;
     while (1) {
 	string = va_arg(argList, char *);

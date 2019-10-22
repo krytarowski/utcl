@@ -344,8 +344,8 @@ EXTERN void		Tcl_ResetResult _ANSI_ARGS_((Tcl_Interp *interp));
 #define Tcl_Return Tcl_SetResult
 EXTERN int		Tcl_ScanElement _ANSI_ARGS_((char *string,
 			    int *flagPtr));
-EXTERN void		Tcl_SetErrorCode _ANSI_ARGS_(
-				VARARGS);
+EXTERN void		Tcl_SetErrorCode _ANSI_ARGS_((
+				Tcl_Interp *interp, ...));
 EXTERN void		Tcl_SetResult _ANSI_ARGS_((Tcl_Interp *interp,
 			    char *string, Tcl_FreeProc *freeProc));
 EXTERN char *		Tcl_SetVar _ANSI_ARGS_((Tcl_Interp *interp,
