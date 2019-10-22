@@ -276,7 +276,7 @@ EXTERN void		Tcl_ValidateAllMemory _ANSI_ARGS_((char *file,
 
 EXTERN void		Tcl_AppendElement _ANSI_ARGS_((Tcl_Interp *interp,
 			    char *string, int noSep));
-EXTERN void		Tcl_AppendResult _ANSI_ARGS_(VARARGS);
+EXTERN void		Tcl_AppendResult _ANSI_ARGS_((Tcl_Interp *interp, ...));
 EXTERN char *		Tcl_AssembleCmd _ANSI_ARGS_((Tcl_CmdBuf buffer,
 			    char *string));
 EXTERN void		Tcl_AddErrorInfo _ANSI_ARGS_((Tcl_Interp *interp,

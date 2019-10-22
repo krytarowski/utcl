@@ -1010,7 +1010,7 @@ Tcl_SetResult(interp, string, freeProc)
 	/* VARARGS2 */
 #ifndef lint
 void
-Tcl_AppendResult(va_alist)
+Tcl_AppendResult(Tcl_Interp *interp, ...)
 #else
 void
 	/* VARARGS2 */ /* ARGSUSED */
@@ -1020,10 +1020,9 @@ Tcl_AppendResult(interp, p, va_alist)
     char *p;			/* One or more strings to add to the
 				 * result, terminated with NULL. */
 #endif
-    va_dcl
 {
-    va_list argList;
-    register Interp *iPtr;
+    va_list argList, argList2;
+    Interp *iPtr;
     char *string;
     int newSpace;
 
@@ -1032,8 +1031,10 @@ Tcl_AppendResult(interp, p, va_alist)
      * needed.
      */
 
-    va_start(argList);
-    iPtr = va_arg(argList, Interp *);
+    iPtr = (Interp *) interp;
+
+    va_start(argList, interp);
+    va_copy(argList2, argList);
     newSpace = 0;
     while (1) {
 	string = va_arg(argList, char *);
@@ -1059,17 +1060,15 @@ Tcl_AppendResult(interp, p, va_alist)
      * them into the buffer.
      */
 
-    va_start(argList);
-    (void) va_arg(argList, Tcl_Interp *);
     while (1) {
-	string = va_arg(argList, char *);
+	string = va_arg(argList2, char *);
 	if (string == NULL) {
 	    break;
 	}
 	strcpy(iPtr->appendResult + iPtr->appendUsed, string);
 	iPtr->appendUsed += strlen(string);
     }
-    va_end(argList);
+    va_end(argList2);
 }
 
 /*
