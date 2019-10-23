@@ -1007,19 +1007,12 @@ Tcl_SetResult(interp, string, freeProc)
  *----------------------------------------------------------------------
  */
 
-	/* VARARGS2 */
-#ifndef lint
 void
-Tcl_AppendResult(Tcl_Interp *interp, ...)
-#else
-void
-	/* VARARGS2 */ /* ARGSUSED */
-Tcl_AppendResult(interp, p, va_alist)
-    Tcl_Interp *interp;		/* Interpreter whose result is to be
-				 * extended. */
-    char *p;			/* One or more strings to add to the
-				 * result, terminated with NULL. */
-#endif
+Tcl_AppendResult(
+    Tcl_Interp *interp			/* Interpreter whose result is to be
+					 * extended. */,
+    ...					/* One or more strings to add to the
+					 * result, terminated with NULL. */)
 {
     va_list argList, argList2;
     Interp *iPtr;
@@ -1252,19 +1245,13 @@ Tcl_ResetResult(interp)
  *
  *----------------------------------------------------------------------
  */
-	/* VARARGS2 */
-#ifndef lint
+
 void
-Tcl_SetErrorCode(Tcl_Interp *interp, ...)
-#else
-void
-	/* VARARGS2 */ /* ARGSUSED */
-Tcl_SetErrorCode(interp, p, va_alist)
-    Tcl_Interp *interp;		/* Interpreter whose errorCode variable is
-				 * to be set. */
-    char *p;			/* One or more elements to add to errorCode,
-				 * terminated with NULL. */
-#endif
+Tcl_SetErrorCode(
+    Tcl_Interp *interp	/* Interpreter whose errorCode variable is
+			 * to be set. */,
+    ...			/* One or more elements to add to errorCode,
+			 * terminated with NULL. */)
 {
     va_list argList;
     char *string;

@@ -972,16 +972,12 @@ Tcl_AddErrorInfo(interp, message)
  *
  *----------------------------------------------------------------------
  */
-	/* VARARGS2 */ /* ARGSUSED */
+
 int
-#ifndef lint
-Tcl_VarEval(Tcl_Interp *interp, ...)
-#else
-Tcl_VarEval(iPtr, p, va_alist)
-    Tcl_Interp *iPtr;		/* Interpreter in which to execute command. */
-    char *p;			/* One or more strings to concatenate,
-				 * terminated with a NULL string. */
-#endif
+Tcl_VarEval(
+    Tcl_Interp *interp		/* Interpreter in which to execute command. */,
+    ...				/* One or more strings to concatenate,
+				 * terminated with a NULL string. */)
 {
     va_list argList;
 #define FIXED_SIZE 200
