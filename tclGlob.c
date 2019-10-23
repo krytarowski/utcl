@@ -440,7 +440,7 @@ Tcl_TildeSubst(interp, name)
 	if (length >= curSize) {
 	    length = curSize-1;
 	}
-	memcpy((VOID *) curBuf, (VOID *) (name+1), length);
+	memcpy((void *) curBuf, (void *) (name+1), length);
 	curBuf[length] = '\0';
 	pwPtr = getpwnam(curBuf);
 	if (pwPtr == NULL) {

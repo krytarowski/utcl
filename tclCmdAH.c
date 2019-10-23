@@ -864,7 +864,7 @@ Tcl_FormatCmd(dummy, interp, argc, argv)
 	    newSpace = 2*(dstSize + size);
 	    newDst = (char *) ckalloc((unsigned) newSpace+1);
 	    if (dstSize != 0) {
-		memcpy((VOID *) newDst, (VOID *) dst, dstSize);
+		memcpy((void *) newDst, (void *) dst, dstSize);
 	    }
 	    if (dstSpace != TCL_RESULT_SIZE) {
 		ckfree(dst);
@@ -873,7 +873,7 @@ Tcl_FormatCmd(dummy, interp, argc, argv)
 	    dstSpace = newSpace;
 	}
 	if (noPercent) {
-	    memcpy((VOID *) (dst+dstSize), (VOID *) oneWordValue, size);
+	    memcpy((void *) (dst+dstSize), (void *) oneWordValue, size);
 	    dstSize += size;
 	    dst[dstSize] = 0;
 	} else {
