@@ -31,11 +31,6 @@
 #undef _ANSI_ARGS_
 #if ((defined(__STDC__) || defined(SABER)) && !defined(NO_PROTOTYPE)) || defined(__cplusplus)
 #   define _ANSI_ARGS_(x)	x
-#   ifdef __cplusplus
-#       define VARARGS (...)
-#   else
-#       define VARARGS ()
-#   endif
 #else
 #   define _ANSI_ARGS_(x)	()
 #endif
