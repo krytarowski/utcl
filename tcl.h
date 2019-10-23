@@ -23,33 +23,6 @@
 #define TCL_MAJOR_VERSION 6
 #define TCL_MINOR_VERSION 7
 
-/*
- * Definitions that allow Tcl functions with variable numbers of
- * arguments to be used with either varargs.h or stdarg.h.  TCL_VARARGS
- * is used in procedure prototypes.  TCL_VARARGS_DEF is used to declare
- * the arguments in a function definiton: it takes the type and name of
- * the first argument and supplies the appropriate argument declaration
- * string for use in the function definition.  TCL_VARARGS_START
- * initializes the va_list data structure and returns the first argument.
- */
-
-#if defined(__STDC__) || defined(HAS_STDARG)
-#   define TCL_VARARGS(type, name) (type name, ...)
-#   define TCL_VARARGS_DEF(type, name) (type name, ...)
-#   define TCL_VARARGS_START(type, name, list) (va_start(list, name), name)
-#else
-#   ifdef __cplusplus
-#	define TCL_VARARGS(type, name) (type name, ...)
-#	define TCL_VARARGS_DEF(type, name) (type va_alist, ...)
-#   else
-#	define TCL_VARARGS(type, name) ()
-#	define TCL_VARARGS_DEF(type, name) (va_alist)
-#   endif
-#   define TCL_VARARGS_START(type, name, list) \
-	(va_start(list), va_arg(list, type))
-#endif
-
-
 #ifdef __cplusplus
 #   define EXTERN extern "C"
 #else
