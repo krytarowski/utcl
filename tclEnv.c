@@ -55,7 +55,7 @@ static void		EnvInit _ANSI_ARGS_((void));
 static char *		EnvTraceProc _ANSI_ARGS_((ClientData clientData,
 			    Tcl_Interp *interp, char *name1, char *name2,
 			    int flags));
-static int		FindVariable _ANSI_ARGS_((CONST char *name,
+static int		FindVariable _ANSI_ARGS_((const char *name,
 			    int *lengthPtr));
 
 /*
@@ -155,14 +155,14 @@ TclSetupEnv(interp)
 
 static int
 FindVariable(name, lengthPtr)
-    CONST char *name;		/* Name of desired environment variable. */
+    const char *name;		/* Name of desired environment variable. */
     int *lengthPtr;		/* Used to return length of name (for
 				 * successful searches) or number of non-NULL
 				 * entries in environ (for unsuccessful
 				 * searches). */
 {
     int i;
-    CONST register char *p1, *p2;
+    const register char *p1, *p2;
 
     for (i = 0, p1 = environ[i]; p1 != NULL; i++, p1 = environ[i]) {
 	for (p2 = name; *p2 == *p1; p1++, p2++) {

@@ -84,11 +84,11 @@ Tcl_CreateExtendedInterp ();
 
 EXTERN char *
 Tcl_DeleteKeyedListField _ANSI_ARGS_((Tcl_Interp  *interp,
-                                      CONST char  *fieldName,
-                                      CONST char  *keyedList));
+                                      const char  *fieldName,
+                                      const char  *keyedList));
 EXTERN char * 
 Tcl_DownShift _ANSI_ARGS_((char       *targetStr,
-                           CONST char *sourceStr));
+                           const char *sourceStr));
 EXTERN void
 Tcl_ErrorAbort _ANSI_ARGS_((Tcl_Interp  *interp,
                             int          noStackDump,
@@ -96,54 +96,54 @@ Tcl_ErrorAbort _ANSI_ARGS_((Tcl_Interp  *interp,
 
 EXTERN char * 
 Tcl_UpShift _ANSI_ARGS_((char       *targetStr,
-                         CONST char *sourceStr));
+                         const char *sourceStr));
 
 EXTERN int
 Tcl_GetKeyedListField _ANSI_ARGS_((Tcl_Interp  *interp,
-                                   CONST char  *fieldName,
-                                   CONST char  *keyedList,
+                                   const char  *fieldName,
+                                   const char  *keyedList,
                                    char       **fieldValuePtr));
 
 int
 Tcl_GetKeyedListKeys _ANSI_ARGS_((Tcl_Interp  *interp,
-                                  CONST char  *subFieldName,
-                                  CONST char  *keyedList,
+                                  const char  *subFieldName,
+                                  const char  *keyedList,
                                   int         *keyesArgcPtr,
                                   char      ***keyesArgvPtr));
 
 EXTERN int 
 Tcl_GetLong _ANSI_ARGS_((Tcl_Interp  *interp,
-                         CONST char *string,
+                         const char *string,
                          long        *longPtr));
 
 EXTERN int 
 Tcl_GetUnsigned _ANSI_ARGS_((Tcl_Interp  *interp,
-                             CONST char *string,
+                             const char *string,
                              unsigned   *unsignedPtr));
 
 EXTERN char *
 Tcl_SetKeyedListField _ANSI_ARGS_((Tcl_Interp  *interp,
-                                   CONST char  *fieldName,
-                                   CONST char  *fieldvalue,
-                                   CONST char  *keyedList));
+                                   const char  *fieldName,
+                                   const char  *fieldvalue,
+                                   const char  *keyedList));
 
 EXTERN int
-Tcl_StrToLong _ANSI_ARGS_((CONST char *string,
+Tcl_StrToLong _ANSI_ARGS_((const char *string,
                            int          base,
                            long        *longPtr));
 
 EXTERN int
-Tcl_StrToInt _ANSI_ARGS_((CONST char *string,
+Tcl_StrToInt _ANSI_ARGS_((const char *string,
                           int         base,
                           int        *intPtr));
 
 EXTERN int
-Tcl_StrToUnsigned _ANSI_ARGS_((CONST char *string,
+Tcl_StrToUnsigned _ANSI_ARGS_((const char *string,
                                int         base,
                                unsigned   *unsignedPtr));
 
 EXTERN int
-Tcl_StrToDouble _ANSI_ARGS_((CONST char  *string,
+Tcl_StrToDouble _ANSI_ARGS_((const char  *string,
                              double      *doublePtr));
 
 EXTERN void_pt  
@@ -155,7 +155,7 @@ Tcl_HandleFree _ANSI_ARGS_((void_pt  headerPtr,
                             void_pt  entryPtr));
 
 EXTERN void_pt
-Tcl_HandleTblInit _ANSI_ARGS_((CONST char *handleBase,
+Tcl_HandleTblInit _ANSI_ARGS_((const char *handleBase,
                                int         entrySize,
                                int         initEntries));
 
@@ -178,7 +178,7 @@ Tcl_WalkKeyToHandle _ANSI_ARGS_((void_pt   headerPtr,
 EXTERN void_pt
 Tcl_HandleXlate _ANSI_ARGS_((Tcl_Interp  *interp,
                              void_pt      headerPtr,
-                             CONST  char *handle));
+                             const  char *handle));
 
 EXTERN int
 Tcl_MathError _ANSI_ARGS_((char *functionName,
@@ -187,18 +187,18 @@ Tcl_MathError _ANSI_ARGS_((char *functionName,
 EXTERN void 
 Tcl_Startup _ANSI_ARGS_((Tcl_Interp   *interp,
                          int           argc,
-                         CONST char  **argv,
-                         CONST char   *defaultFile,
+                         const char  **argv,
+                         const char   *defaultFile,
                          unsigned      options));
 
 EXTERN int
 Tcl_ShellEnvInit _ANSI_ARGS_((Tcl_Interp  *interp,
                               unsigned     options,
-                              CONST char  *programName,
+                              const char  *programName,
                               int          argc,
-                              CONST char **argv,
+                              const char **argv,
                               int          interactive,
-                              CONST char  *defaultFile));
+                              const char  *defaultFile));
 
 EXTERN int
 Tcl_System _ANSI_ARGS_((Tcl_Interp *interp,

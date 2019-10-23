@@ -279,12 +279,12 @@ extern char **environ;
  */
 
 #ifndef _CRAY
-extern int	access	   _ANSI_ARGS_((CONST char *path, int mode));
-extern int	chdir	   _ANSI_ARGS_((CONST char *path));
+extern int	access	   _ANSI_ARGS_((const char *path, int mode));
+extern int	chdir	   _ANSI_ARGS_((const char *path));
 extern int	close	   _ANSI_ARGS_((int fd));
 extern int	dup2	   _ANSI_ARGS_((int src, int dst));
 extern void	endpwent   _ANSI_ARGS_((void));
-/* extern int	execvp	   _ANSI_ARGS_((CONST char *name, char **argv)); */
+/* extern int	execvp	   _ANSI_ARGS_((const char *name, char **argv)); */
 extern void	_exit 	   _ANSI_ARGS_((int status));
 /* extern pid_t	fork	   _ANSI_ARGS_((void)); */
 /* extern uid_t	geteuid	   _ANSI_ARGS_((void)); */
@@ -295,11 +295,11 @@ extern char *	getwd  	   _ANSI_ARGS_((char *buffer));
 /* extern long	lseek	   _ANSI_ARGS_((int fd, int offset, int whence)); */
 extern char *	mktemp	   _ANSI_ARGS_((char *template));
 #if !(defined(sparc) || defined(_IBMR2))
-extern int	open	   _ANSI_ARGS_((CONST char *path, int flags, ...));
+extern int	open	   _ANSI_ARGS_((const char *path, int flags, ...));
 #endif
 extern int	pipe	   _ANSI_ARGS_((int *fdPtr));
 /* extern int	read	   _ANSI_ARGS_((int fd, char *buf, int numBytes)); */
-extern int	unlink 	   _ANSI_ARGS_((CONST char *path));
+extern int	unlink 	   _ANSI_ARGS_((const char *path));
 /* extern int	write	   _ANSI_ARGS_((int fd, char *buf, int numBytes)); */
 #endif /* _CRAY */
 

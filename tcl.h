@@ -29,10 +29,8 @@
  */
 
 #undef _ANSI_ARGS_
-#undef const
 #if ((defined(__STDC__) || defined(SABER)) && !defined(NO_PROTOTYPE)) || defined(__cplusplus)
 #   define _ANSI_ARGS_(x)	x
-#   define CONST const
 #   ifdef __cplusplus
 #       define VARARGS (...)
 #   else
@@ -40,7 +38,6 @@
 #   endif
 #else
 #   define _ANSI_ARGS_(x)	()
-#   define CONST
 #endif
 
 /*

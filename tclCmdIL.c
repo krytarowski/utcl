@@ -24,8 +24,8 @@
  * Forward declarations for procedures defined in this file:
  */
 
-static int		SortCompareProc _ANSI_ARGS_((CONST VOID *first,
-			    CONST VOID *second));
+static int		SortCompareProc _ANSI_ARGS_((const VOID *first,
+			    const VOID *second));
 
 /*
  *----------------------------------------------------------------------
@@ -1156,7 +1156,7 @@ Tcl_LsortCmd(notUsed, interp, argc, argv)
 
 static int
 SortCompareProc(first, second)
-    CONST VOID *first, *second;		/* Elements to be compared. */
+    const VOID *first, *second;		/* Elements to be compared. */
 {
     return strcmp(*((char **) first), *((char **) second));
 }
