@@ -22,9 +22,9 @@
  * Forward references to procedures defined later in this file:
  */
 
-static  int	InterpProc _ANSI_ARGS_((ClientData clientData,
-		    Tcl_Interp *interp, int argc, char **argv));
-static  void	ProcDeleteProc _ANSI_ARGS_((ClientData clientData));
+static  int	InterpProc (ClientData clientData,
+		    Tcl_Interp *interp, int argc, char **argv);
+static  void	ProcDeleteProc (ClientData clientData);
 
 /*
  *----------------------------------------------------------------------

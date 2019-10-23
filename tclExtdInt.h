@@ -145,70 +145,70 @@ extern char *tclXWrongArgs;
  * Prototypes for utility procedures.
  */
 void
-Tcl_DynBufInit _ANSI_ARGS_((dynamicBuf_t *dynBufPtr));
+Tcl_DynBufInit (dynamicBuf_t *dynBufPtr);
 
 void
-Tcl_DynBufFree _ANSI_ARGS_((dynamicBuf_t *dynBufPtr));
+Tcl_DynBufFree (dynamicBuf_t *dynBufPtr);
 
 void
-Tcl_DynBufReturn _ANSI_ARGS_((Tcl_Interp    *interp,
-                              dynamicBuf_t *dynBufPtr));
+Tcl_DynBufReturn (Tcl_Interp    *interp,
+                              dynamicBuf_t *dynBufPtr);
 
 void
-Tcl_DynBufAppend _ANSI_ARGS_((dynamicBuf_t *dynBufPtr,
-                              char         *newStr));
+Tcl_DynBufAppend (dynamicBuf_t *dynBufPtr,
+                              char         *newStr);
 
 void
-Tcl_ExpandDynBuf _ANSI_ARGS_((dynamicBuf_t *dynBufPtr,
-                              int           appendSize));
+Tcl_ExpandDynBuf (dynamicBuf_t *dynBufPtr,
+                              int           appendSize);
 
 int
-Tcl_DynamicFgets _ANSI_ARGS_((dynamicBuf_t *dynBufPtr,
+Tcl_DynamicFgets (dynamicBuf_t *dynBufPtr,
                               FILE         *filePtr,
-                              int           append));
+                              int           append);
 
 int
-Tcl_ConvertFileHandle _ANSI_ARGS_((Tcl_Interp *interp,
-                                  char       *handle));
+Tcl_ConvertFileHandle (Tcl_Interp *interp,
+                                  char       *handle);
 
 time_t
-Tcl_GetDate _ANSI_ARGS_((char   *p,
+Tcl_GetDate (char   *p,
                          time_t  now,
-                         long    zone));
+                         long    zone);
 
 int
-Tcl_ProcessSignal _ANSI_ARGS_((Tcl_Interp *interp,
-                               int         cmdResultCode));
+Tcl_ProcessSignal (Tcl_Interp *interp,
+                               int         cmdResultCode);
 
 void
-Tcl_RegExpClean _ANSI_ARGS_((regexp_pt regExpPtr));
+Tcl_RegExpClean (regexp_pt regExpPtr);
 
 int
-Tcl_RegExpCompile _ANSI_ARGS_((Tcl_Interp  *interp,
+Tcl_RegExpCompile (Tcl_Interp  *interp,
                                regexp_pt    regExpPtr,
                                char        *expression,
-                               int          flags));
+                               int          flags);
 
 int
-Tcl_RegExpExecute _ANSI_ARGS_((Tcl_Interp  *interp,
+Tcl_RegExpExecute (Tcl_Interp  *interp,
                                regexp_pt    regExpPtr,
                                char        *matchStrIn,
-                               char        *matchStrLower));
+                               char        *matchStrLower);
 void
 Tcl_ResetSignals ();
 
 int
-Tcl_ReturnDouble _ANSI_ARGS_((Tcl_Interp *interp,
-                              double      number));
+Tcl_ReturnDouble (Tcl_Interp *interp,
+                              double      number);
 
 int
-Tcl_SetupFileEntry _ANSI_ARGS_((Tcl_Interp *interp,
+Tcl_SetupFileEntry (Tcl_Interp *interp,
                                 int         fileNum,
                                 int         readable,
-                                int         writable));
+                                int         writable);
 
 void
-Tcl_SetupSigInt _ANSI_ARGS_(());
+Tcl_SetupSigInt ();
 
 /*
  * Definitions required to initialize all extended commands.  These are either
@@ -225,301 +225,301 @@ Tcl_SetupSigInt _ANSI_ARGS_(());
  * from tclXbsearch.c
  */
 extern int 
-Tcl_BsearchCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_BsearchCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXchmod.c
  */
 extern int 
-Tcl_ChmodCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ChmodCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_ChownCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ChownCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_ChgrpCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ChgrpCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXclock.c
  */
 extern int 
-Tcl_GetclockCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_GetclockCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_FmtclockCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FmtclockCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXcnvclock.c
  */
 extern int 
-Tcl_ConvertclockCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ConvertclockCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXcmdloop.c
  */
 extern int 
-Tcl_CommandloopCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CommandloopCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXdebug.c
  */
 extern void
-Tcl_InitDebug _ANSI_ARGS_((Tcl_Interp *interp));
+Tcl_InitDebug (Tcl_Interp *interp);
 
 /*
  * from tclXdup.c
  */
 extern int 
-Tcl_DupCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_DupCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXfcntl.c
  */
 extern int 
-Tcl_FcntlCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FcntlCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXfilecmds.c
  */
 extern int 
-Tcl_PipeCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_PipeCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_CopyfileCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CopyfileCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_FstatCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FstatCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_LgetsCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LgetsCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int
-Tcl_FlockCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FlockCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int
-Tcl_FunlockCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FunlockCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXfilescan.c
  */
 extern void
-Tcl_InitFilescan _ANSI_ARGS_((Tcl_Interp *interp));
+Tcl_InitFilescan (Tcl_Interp *interp);
 
 /*
  * from tclXfmath.c
  */
 extern int 
-Tcl_AcosCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_AcosCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_AsinCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_AsinCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_AtanCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_AtanCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_CosCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CosCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_SinCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_SinCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_TanCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_TanCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_CoshCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CoshCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_SinhCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_SinhCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_TanhCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_TanhCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_ExpCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ExpCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_LogCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LogCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_Log10Cmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_Log10Cmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_SqrtCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_SqrtCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_FabsCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FabsCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_FloorCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FloorCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_CeilCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CeilCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_FmodCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_FmodCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_PowCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_PowCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXgeneral.c
  */
 
 extern int 
-Tcl_EchoCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_EchoCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_InfoxCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_InfoxCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern void
-TclX_InitGeneral _ANSI_ARGS_((Tcl_Interp *interp));
+TclX_InitGeneral (Tcl_Interp *interp);
 
 extern int 
-Tcl_LoopCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LoopCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXid.c
  */
 extern int 
-Tcl_IdCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_IdCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXkeylist.c
  */
 extern int 
-Tcl_KeyldelCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_KeyldelCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_KeylgetCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_KeylgetCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_KeylkeysCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_KeylkeysCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_KeylsetCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_KeylsetCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXlist.c
  */
 extern int 
-Tcl_LvarpopCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LvarpopCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_LvarcatCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LvarcatCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_LvarpushCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LvarpushCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_LemptyCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LemptyCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXmath.c
  */
 extern int 
-Tcl_MaxCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_MaxCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_MinCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_MinCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_RandomCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_RandomCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXmsgcat.c
  */
 extern void
-Tcl_InitMsgCat _ANSI_ARGS_((Tcl_Interp *interp));
+Tcl_InitMsgCat (Tcl_Interp *interp);
 
 /*
  * from tclXprocess.c
  */
 extern int 
-Tcl_ExeclCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ExeclCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_ForkCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ForkCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_WaitCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_WaitCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXprofile.c
  */
 void
-Tcl_InitProfile _ANSI_ARGS_((Tcl_Interp *interp));
+Tcl_InitProfile (Tcl_Interp *interp);
 
 /*
  * from tclXselect.c
  */
 extern int 
-Tcl_SelectCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_SelectCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXsignal.c
  */
 extern void
-Tcl_InitSignalHandling _ANSI_ARGS_((Tcl_Interp *interp));
+Tcl_InitSignalHandling (Tcl_Interp *interp);
 
 /*
  * from tclXstring.c
  */
 extern int 
-Tcl_CindexCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CindexCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_ClengthCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ClengthCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_CrangeCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CrangeCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_ReplicateCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_ReplicateCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_TranslitCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_TranslitCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_CtypeCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_CtypeCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXlib.c
  */
 extern int
-Tcl_Demand_loadCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_Demand_loadCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int
-Tcl_LoadlibindexCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LoadlibindexCmd (ClientData, Tcl_Interp*, int, char**);
 
 /*
  * from tclXunixcmds.c
  */
 extern int 
-Tcl_AlarmCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_AlarmCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_SleepCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_SleepCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_SystemCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_SystemCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_TimesCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_TimesCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_UmaskCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_UmaskCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_LinkCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_LinkCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_UnlinkCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_UnlinkCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_MkdirCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_MkdirCmd (ClientData, Tcl_Interp*, int, char**);
 
 extern int 
-Tcl_RmdirCmd _ANSI_ARGS_((ClientData, Tcl_Interp*, int, char**));
+Tcl_RmdirCmd (ClientData, Tcl_Interp*, int, char**);
 
 #endif

@@ -40,34 +40,34 @@ typedef struct traceInfo_t {
  * Prototypes of internal functions.
  */
 void
-PrintStr _ANSI_ARGS_((FILE *filePtr,
+PrintStr (FILE *filePtr,
                       char *string,
-                      int   numChars));
+                      int   numChars);
 
 void
-PrintArg _ANSI_ARGS_((FILE *filePtr,
+PrintArg (FILE *filePtr,
                       char *argStr,
-                      int   noTruncate));
+                      int   noTruncate);
 
 void
-TraceCode  _ANSI_ARGS_((traceInfo_pt traceInfoPtr,
+TraceCode (traceInfo_pt traceInfoPtr,
                         int          level,
                         char        *command,
                         int          argc,
-                        char       **argv));
+                        char       **argv);
 
 void
-CmdTraceRoutine _ANSI_ARGS_((ClientData    clientData,
+CmdTraceRoutine (ClientData    clientData,
                              Tcl_Interp   *interp,
                              int           level,
                              char         *command,
                              Tcl_CmdProc  *cmdProc,
                              ClientData    cmdClientData,
                              int           argc,
-                             char        **argv));
+                             char        **argv);
 
 void
-CleanUpDebug _ANSI_ARGS_((ClientData clientData));
+CleanUpDebug (ClientData clientData);
 
 
 /*

@@ -97,8 +97,8 @@ char tclTypeTable[] = {
  * Function prototypes for procedures local to this file:
  */
 
-static char *	QuoteEnd _ANSI_ARGS_((char *string, int term));
-static char *	VarNameEnd _ANSI_ARGS_((char *string));
+static char *	QuoteEnd (char *string, int term);
+static char *	VarNameEnd (char *string);
 
 /*
  *----------------------------------------------------------------------

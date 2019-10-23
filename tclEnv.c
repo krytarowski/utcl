@@ -51,12 +51,12 @@ static int environSize = 0;	/* Non-zero means that the all of the
  * Declarations for local procedures defined in this file:
  */
 
-static void		EnvInit _ANSI_ARGS_((void));
-static char *		EnvTraceProc _ANSI_ARGS_((ClientData clientData,
+static void		EnvInit (void);
+static char *		EnvTraceProc (ClientData clientData,
 			    Tcl_Interp *interp, char *name1, char *name2,
-			    int flags));
-static int		FindVariable _ANSI_ARGS_((const char *name,
-			    int *lengthPtr));
+			    int flags);
+static int		FindVariable (const char *name,
+			    int *lengthPtr);
 
 /*
  *----------------------------------------------------------------------

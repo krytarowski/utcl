@@ -41,11 +41,11 @@ typedef struct {
  * Declarations for procedures local to this file:
  */
 
-static void		AppendResult _ANSI_ARGS_((Tcl_Interp *interp,
+static void		AppendResult (Tcl_Interp *interp,
 			    char *dir, char *separator, char *name,
-			    int nameLength));
-static int		DoGlob _ANSI_ARGS_((Tcl_Interp *interp, char *dir,
-			    char *rem));
+			    int nameLength);
+static int		DoGlob (Tcl_Interp *interp, char *dir,
+			    char *rem);
 
 /*
  *----------------------------------------------------------------------

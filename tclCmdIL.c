@@ -24,8 +24,8 @@
  * Forward declarations for procedures defined in this file:
  */
 
-static int		SortCompareProc _ANSI_ARGS_((const void *first,
-			    const void *second));
+static int		SortCompareProc (const void *first,
+			    const void *second);
 
 /*
  *----------------------------------------------------------------------
