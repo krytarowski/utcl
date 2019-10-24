@@ -39,11 +39,11 @@
 
 	/* ARGSUSED */
 int
-Tcl_BreakCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_BreakCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     if (argc != 1) {
 	Tcl_AppendResult(interp, "wrong # args: should be \"",
@@ -72,11 +72,11 @@ Tcl_BreakCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_CaseCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_CaseCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     int i, result;
     int body;
@@ -212,11 +212,11 @@ Tcl_CaseCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_CatchCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_CatchCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     int result;
 
@@ -257,11 +257,11 @@ Tcl_CatchCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_ConcatCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_ConcatCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     if (argc == 1) {
 	Tcl_AppendResult(interp, "wrong # args: should be \"", argv[0],
@@ -293,11 +293,11 @@ Tcl_ConcatCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_ContinueCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_ContinueCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     if (argc != 1) {
 	Tcl_AppendResult(interp, "wrong # args: should be \"", argv[0],
@@ -326,11 +326,11 @@ Tcl_ContinueCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_ErrorCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_ErrorCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     Interp *iPtr = (Interp *) interp;
 
@@ -371,11 +371,11 @@ Tcl_ErrorCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_EvalCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_EvalCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     int result;
     char *cmd;
@@ -425,11 +425,11 @@ Tcl_EvalCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_ExprCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_ExprCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     if (argc != 2) {
 	Tcl_AppendResult(interp, "wrong # args: should be \"", argv[0],
@@ -459,11 +459,11 @@ Tcl_ExprCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_ForCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_ForCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     int result, value;
 
@@ -537,11 +537,11 @@ Tcl_ForCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_ForeachCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_ForeachCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     int listArgc, i, result;
     char **listArgv;
@@ -612,11 +612,11 @@ Tcl_ForeachCmd(dummy, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-Tcl_FormatCmd(dummy, interp, argc, argv)
-    ClientData dummy;			/* Not used. */
-    Tcl_Interp *interp;			/* Current interpreter. */
-    int argc;				/* Number of arguments. */
-    char **argv;			/* Argument strings. */
+Tcl_FormatCmd(
+    ClientData dummy,			/* Not used. */
+    Tcl_Interp *interp,			/* Current interpreter. */
+    int argc,				/* Number of arguments. */
+    char **argv				/* Argument strings. */)
 {
     register char *format;	/* Used to read characters from the format
 				 * string. */

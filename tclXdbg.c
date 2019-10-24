@@ -80,10 +80,10 @@ CleanUpDebug (ClientData clientData);
  *-----------------------------------------------------------------------------
  */
 void
-PrintStr (filePtr, string, numChars)
-    FILE *filePtr;
-    char *string;
-    int   numChars;
+PrintStr (
+    FILE *filePtr,
+    char *string,
+    int   numChars)
 {
     int idx;
 
@@ -109,10 +109,10 @@ PrintStr (filePtr, string, numChars)
  *-----------------------------------------------------------------------------
  */
 void
-PrintArg (filePtr, argStr, noTruncate)
-    FILE *filePtr;
-    char *argStr;
-    int   noTruncate;
+PrintArg (
+    FILE *filePtr,
+    char *argStr,
+    int   noTruncate)
 {
     int idx, argLen, printLen;
     int quote_it;
@@ -147,12 +147,12 @@ PrintArg (filePtr, argStr, noTruncate)
  *-----------------------------------------------------------------------------
  */
 void
-TraceCode (traceInfoPtr, level, command, argc, argv)
-    traceInfo_pt traceInfoPtr;
-    int          level;
-    char        *command;
-    int          argc;
-    char       **argv;
+TraceCode (
+    traceInfo_pt traceInfoPtr,
+    int          level,
+    char        *command,
+    int          argc,
+    char       **argv)
 {
     int idx, cmdLen, printLen;
 
@@ -193,16 +193,15 @@ TraceCode (traceInfoPtr, level, command, argc, argv)
  *-----------------------------------------------------------------------------
  */
 void
-CmdTraceRoutine (clientData, interp, level, command, cmdProc, cmdClientData, 
-                 argc, argv)
-    ClientData    clientData;
-    Tcl_Interp   *interp;
-    int           level;
-    char         *command;
-    Tcl_CmdProc  *cmdProc;
-    ClientData    cmdClientData;
-    int           argc;
-    char        **argv;
+CmdTraceRoutine (
+    ClientData    clientData,
+    Tcl_Interp   *interp,
+    int           level,
+    char         *command,
+    Tcl_CmdProc  *cmdProc,
+    ClientData    cmdClientData,
+    int           argc,
+    char        **argv)
 {
     Interp       *iPtr = (Interp *) interp;
     traceInfo_pt  traceInfoPtr = (traceInfo_pt) clientData;
@@ -234,11 +233,11 @@ CmdTraceRoutine (clientData, interp, level, command, cmdProc, cmdClientData,
  *-----------------------------------------------------------------------------
  */
 static int
-Tcl_CmdtraceCmd (clientData, interp, argc, argv)
-    ClientData    clientData;
-    Tcl_Interp   *interp;
-    int           argc;
-    char        **argv;
+Tcl_CmdtraceCmd (
+    ClientData    clientData,
+    Tcl_Interp   *interp,
+    int           argc,
+    char        **argv)
 {
     Interp       *iPtr = (Interp *) interp;
     traceInfo_pt  infoPtr = (traceInfo_pt) clientData;
@@ -365,8 +364,8 @@ invalidOption:
  *-----------------------------------------------------------------------------
  */
 void
-CleanUpDebug (clientData)
-    ClientData clientData;
+CleanUpDebug (
+    ClientData clientData)
 {
     traceInfo_pt infoPtr = (traceInfo_pt) clientData;
 
@@ -385,8 +384,8 @@ CleanUpDebug (clientData)
  *-----------------------------------------------------------------------------
  */
 void
-Tcl_InitDebug (interp)
-    Tcl_Interp *interp;
+Tcl_InitDebug (
+    Tcl_Interp *interp)
 {
     traceInfo_pt infoPtr;
 

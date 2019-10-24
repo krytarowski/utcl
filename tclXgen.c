@@ -40,11 +40,11 @@ char *tclAppVersion     = NULL;  /* Version number of the application       */
  *-----------------------------------------------------------------------------
  */
 int
-Tcl_InfoxCmd (clientData, interp, argc, argv)
-    ClientData  clientData;
-    Tcl_Interp *interp;
-    int         argc;
-    char      **argv;
+Tcl_InfoxCmd (
+    ClientData  clientData,
+    Tcl_Interp *interp,
+    int         argc,
+    char      **argv)
 {
     if (argc != 2) {
         Tcl_AppendResult (interp, "bad # args: ", argv [0], 
@@ -89,11 +89,11 @@ Tcl_InfoxCmd (clientData, interp, argc, argv)
  *-----------------------------------------------------------------------------
  */
 int
-Tcl_LoopCmd (dummy, interp, argc, argv)
-    ClientData  dummy;
-    Tcl_Interp *interp;
-    int         argc;
-    char      **argv;
+Tcl_LoopCmd (
+    ClientData  dummy,
+    Tcl_Interp *interp,
+    int         argc,
+    char      **argv)
 {
     int   result = TCL_OK;
     int  i, first, limit, incr = 1;
@@ -157,8 +157,8 @@ Tcl_LoopCmd (dummy, interp, argc, argv)
 
 
 void
-TclX_InitGeneral (interp)
-    Tcl_Interp *interp;
+TclX_InitGeneral (
+    Tcl_Interp *interp)
 {
     Tcl_CreateCommand (interp, "infox", Tcl_InfoxCmd, 
                        (ClientData)NULL, NULL);

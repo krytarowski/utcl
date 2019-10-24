@@ -34,11 +34,11 @@ char initCmd[] =
 
 	/* ARGSUSED */
 int
-cmdCheckmem(clientData, interp, argc, argv)
-    ClientData clientData;
-    Tcl_Interp *interp;
-    int argc;
-    char *argv[];
+cmdCheckmem(
+    ClientData clientData,
+    Tcl_Interp *interp,
+    int argc,
+    char *argv[])
 {
     if (argc != 2) {
 	Tcl_AppendResult(interp, "wrong # args: should be \"", argv[0],
@@ -52,11 +52,11 @@ cmdCheckmem(clientData, interp, argc, argv)
 
 	/* ARGSUSED */
 int
-cmdEcho(clientData, interp, argc, argv)
-    ClientData clientData;
-    Tcl_Interp *interp;
-    int argc;
-    char *argv[];
+cmdEcho(
+    ClientData clientData,
+    Tcl_Interp *interp,
+    int argc,
+    char *argv[])
 {
     int i;
 
@@ -83,7 +83,9 @@ cmdEcho(clientData, interp, argc, argv)
 }
 
 int
-main()
+main(
+    int argc,
+    char **argv)
 {
     char line[1000], *cmd;
     int result, gotPartial;

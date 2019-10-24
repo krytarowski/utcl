@@ -82,9 +82,9 @@ static int		FindVariable (const char *name,
  */
 
 void
-TclSetupEnv(interp)
-    Tcl_Interp *interp;		/* Interpreter whose "env" array is to be
-				 * managed. */
+TclSetupEnv(
+    Tcl_Interp *interp		/* Interpreter whose "env" array is to be
+				 * managed. */)
 {
     EnvInterp *eiPtr;
     int i;
@@ -154,12 +154,12 @@ TclSetupEnv(interp)
  */
 
 static int
-FindVariable(name, lengthPtr)
-    const char *name;		/* Name of desired environment variable. */
-    int *lengthPtr;		/* Used to return length of name (for
+FindVariable(
+    const char *name,		/* Name of desired environment variable. */
+    int *lengthPtr		/* Used to return length of name (for
 				 * successful searches) or number of non-NULL
 				 * entries in environ (for unsuccessful
-				 * searches). */
+				 * searches). */)
 {
     int i;
     const register char *p1, *p2;
@@ -201,14 +201,14 @@ FindVariable(name, lengthPtr)
 
 	/* ARGSUSED */
 static char *
-EnvTraceProc(clientData, interp, name1, name2, flags)
-    ClientData clientData;	/* Not used. */
-    Tcl_Interp *interp;		/* Interpreter whose "env" variable is
+EnvTraceProc(
+    ClientData clientData,	/* Not used. */
+    Tcl_Interp *interp,		/* Interpreter whose "env" variable is
 				 * being modified. */
-    char *name1;		/* Better be "env". */
-    char *name2;		/* Name of variable being modified, or
+    char *name1,		/* Better be "env". */
+    char *name2,		/* Name of variable being modified, or
 				 * NULL if whole array is being deleted. */
-    int flags;			/* Indicates what's happening. */
+    int flags			/* Indicates what's happening. */)
 {
     /*
      * First see if the whole "env" variable is being deleted.  If
@@ -275,7 +275,7 @@ EnvTraceProc(clientData, interp, name1, name2, flags)
  */
 
 static void
-EnvInit()
+EnvInit(void)
 {
     char **newEnviron;
     int i, length;

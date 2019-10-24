@@ -61,7 +61,7 @@ typedef struct {
  */
 
 Tcl_CmdBuf
-Tcl_CreateCmdBuf()
+Tcl_CreateCmdBuf(void)
 {
     register CmdBuf *cbPtr;
 
@@ -91,9 +91,9 @@ Tcl_CreateCmdBuf()
  */
 
 void
-Tcl_DeleteCmdBuf(buffer)
-    Tcl_CmdBuf buffer;		/* Token for command buffer (return value
-				 * from previous call to Tcl_CreateCmdBuf). */
+Tcl_DeleteCmdBuf(
+    Tcl_CmdBuf buffer		/* Token for command buffer (return value
+				 * from previous call to Tcl_CreateCmdBuf). */)
 {
     register CmdBuf *cbPtr = (CmdBuf *) buffer;
 
@@ -129,15 +129,15 @@ Tcl_DeleteCmdBuf(buffer)
  */
 
 char *
-Tcl_AssembleCmd(buffer, string)
-    Tcl_CmdBuf buffer;		/* Token for a command buffer previously
+Tcl_AssembleCmd(
+    Tcl_CmdBuf buffer,		/* Token for a command buffer previously
 				 * created by Tcl_CreateCmdBuf.  */
-    char *string;		/* Bytes to be appended to command stream.
+    char *string		/* Bytes to be appended to command stream.
 				 * Note:  if the string is zero length,
 				 * then whatever is buffered will be
 				 * considered to be a complete command
 				 * regardless of whether parentheses are
-				 * matched or not. */
+				 * matched or not. */)
 {
     register CmdBuf *cbPtr = (CmdBuf *) buffer;
     int length, totalLength, c;
@@ -213,8 +213,8 @@ Tcl_AssembleCmd(buffer, string)
  */
 
 int
-Tcl_CommandComplete(cmd)
-    char *cmd;			/* Command to check. */
+Tcl_CommandComplete(
+    char *cmd			/* Command to check. */)
 {
     register char *p = cmd;
 

@@ -17,6 +17,7 @@
  * $Id: panic.c,v 1.1.1.1 2001/04/29 20:34:05 karll Exp $
  */
 
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -38,15 +39,16 @@
 
 	/* VARARGS ARGSUSED */
 void
-panic(format, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
-    char *format;		/* Format string, suitable for passing to
+panic(
+    char *format,		/* Format string, suitable for passing to
 				 * fprintf. */
-    char *arg1, *arg2, *arg3;	/* Additional arguments (variable in number)
-				 * to pass to fprintf. */
-    char *arg4, *arg5, *arg6, *arg7, *arg8;
+    ...				/* Additional arguments (variable in number)
+				 * to pass to fprintf. */)
 {
-    (void) fprintf(stderr, format, arg1, arg2, arg3, arg4, arg5, arg6,
-	    arg7, arg8);
+    va_list va;
+    va_start(va, format);
+    (void) fprintf(stderr, format, va);
+    va_end(va);
     (void) fflush(stderr);
     abort();
 }
