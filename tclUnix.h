@@ -269,9 +269,6 @@
  * Variables provided by the C library:
  */
 
-#if defined(_sgi) || defined(__sgi)
-#define environ _environ
-#endif
 extern char **environ;
 
 /*
