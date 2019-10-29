@@ -8,8 +8,6 @@
 # disable I/O commands -- open, close, gets, puts, etc.
 # CPPFLAGS+= -DTCL_GENERIC_ONLY
 
-CFLAGS+=       -Wno-error
-
 LIB=           utcl
 
 SRCS+= tclGet.c
