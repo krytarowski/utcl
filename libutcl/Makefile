@@ -26,7 +26,6 @@ SRCS+= tclBasic.c
 SRCS+= tclExpr.c
 SRCS+= tclUtil.c
 SRCS+= tclEnv.c
-SRCS+= tinytcl.c
 SRCS+= tclXdbg.c
 SRCS+= tclunxaz.c
 SRCS+= tclGlob.c
