@@ -27,14 +27,6 @@
  * errno here.
  */
 
-/*
-#ifndef TCL_GENERIC_ONLY
-#include "tclUnix.h"
-#else
-int errno;
-#define ERANGE 34
-#endif
-*/
 #include <errno.h>
 
 /*
