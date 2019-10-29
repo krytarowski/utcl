@@ -162,7 +162,7 @@ FindVariable(
 				 * searches). */)
 {
     int i;
-    const register char *p1, *p2;
+    const char *p1, *p2;
 
     for (i = 0, p1 = environ[i]; p1 != NULL; i++, p1 = environ[i]) {
 	for (p2 = name; *p2 == *p1; p1++, p2++) {
@@ -216,7 +216,7 @@ EnvTraceProc(
      */
 
     if (name2 == NULL) {
-	register EnvInterp *eiPtr, *prevPtr;
+	EnvInterp *eiPtr, *prevPtr;
 
 	if ((flags & (TCL_TRACE_UNSETS|TCL_TRACE_DESTROYED))
 		!= (TCL_TRACE_UNSETS|TCL_TRACE_DESTROYED)) {

@@ -159,8 +159,8 @@ DoGlob(
      * in the remainder.
      */
 
-    register char *p;
-    register char c;
+    char *p;
+    char c;
     char *openBrace, *closeBrace;
     int gotSpecial, result;
     char *separator;
@@ -411,7 +411,7 @@ Tcl_TildeSubst(
     char *dir;
     int length;
     int fromPw = 0;
-    register char *p;
+    char *p;
 
     if (name[0] != '~') {
 	return name;

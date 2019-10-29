@@ -51,12 +51,12 @@ Tcl_ProcCmd(dummy, interp, argc, argv)
     int argc;				/* Number of arguments. */
     char **argv;			/* Argument strings. */
 {
-    register Interp *iPtr = (Interp *) interp;
-    register Proc *procPtr;
+    Interp *iPtr = (Interp *) interp;
+    Proc *procPtr;
     int result, argCount, i;
     char **argArray = NULL;
     Arg *lastArgPtr;
-    register Arg *argPtr = NULL;	/* Initialization not needed, but
+    Arg *argPtr = NULL;	/* Initialization not needed, but
 					 * prevents compiler warning. */
 
     if (argc != 4) {
@@ -186,7 +186,7 @@ TclGetFrame(interp, string, framePtrPtr)
     CallFrame **framePtrPtr;	/* Store pointer to frame here (or NULL
 				 * if global frame indicated). */
 {
-    register Interp *iPtr = (Interp *) interp;
+    Interp *iPtr = (Interp *) interp;
     int level, result;
     CallFrame *framePtr;
 
@@ -267,7 +267,7 @@ Tcl_UplevelCmd(dummy, interp, argc, argv)
     int argc;				/* Number of arguments. */
     char **argv;			/* Argument strings. */
 {
-    register Interp *iPtr = (Interp *) interp;
+    Interp *iPtr = (Interp *) interp;
     int result;
     CallFrame *savedVarFramePtr, *framePtr;
 
@@ -419,9 +419,9 @@ InterpProc(clientData, interp, argc, argv)
 				 * procedure. */
     char **argv;		/* Argument values. */
 {
-    register Proc *procPtr = (Proc *) clientData;
-    register Arg *argPtr;
-    register Interp *iPtr = (Interp *) interp;
+    Proc *procPtr = (Proc *) clientData;
+    Arg *argPtr;
+    Interp *iPtr = (Interp *) interp;
     char **args;
     CallFrame frame;
     char *value, *end;
@@ -551,8 +551,8 @@ static void
 ProcDeleteProc(clientData)
     ClientData clientData;		/* Procedure to be deleted. */
 {
-    register Proc *procPtr = (Proc *) clientData;
-    register Arg *argPtr;
+    Proc *procPtr = (Proc *) clientData;
+    Arg *argPtr;
 
     ckfree((char *) procPtr->command);
     for (argPtr = procPtr->argPtr; argPtr != NULL; ) {

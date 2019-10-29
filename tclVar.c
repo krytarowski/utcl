@@ -81,7 +81,7 @@ Tcl_GetVar(
     int flags			/* OR-ed combination of TCL_GLOBAL_ONLY
 				 * or TCL_LEAVE_ERR_MSG bits. */)
 {
-    register char *p;
+    char *p;
 
     /*
      * If varName refers to an array (it ends with a parenthesized
@@ -267,7 +267,7 @@ Tcl_SetVar(
 				 * TCL_LIST_ELEMENT, TCL_NO_SPACE, or
 				 * TCL_LEAVE_ERR_MSG. */)
 {
-    register char *p;
+    char *p;
 
     /*
      * If varName refers to an array (it ends with a parenthesized
@@ -338,10 +338,10 @@ Tcl_SetVar2(
 				 * TCL_LEAVE_ERR_MSG . */)
 {
     Tcl_HashEntry *hPtr;
-    register Var *varPtr = NULL;
+    Var *varPtr = NULL;
 				/* Initial value only used to stop compiler
 				 * from complaining; not really needed. */
-    register Interp *iPtr = (Interp *) interp;
+    Interp *iPtr = (Interp *) interp;
     int length, new, listFlags;
     Var *arrayPtr = NULL;
 
@@ -530,7 +530,7 @@ Tcl_UnsetVar(
     int flags			/* OR-ed combination of any of
 				 * TCL_GLOBAL_ONLY or TCL_LEAVE_ERR_MSG. */)
 {
-    register char *p;
+    char *p;
     int result;
 
     /*
@@ -756,7 +756,7 @@ Tcl_TraceVar(
 				 * invoked upon varName. */
     ClientData clientData	/* Arbitrary argument to pass to proc. */)
 {
-    register char *p;
+    char *p;
 
     /*
      * If varName refers to an array (it ends with a parenthesized
@@ -830,7 +830,7 @@ Tcl_TraceVar2(
     Var *varPtr = NULL;		/* Initial value only used to stop compiler
 				 * from complaining; not really needed. */
     Interp *iPtr = (Interp *) interp;
-    register VarTrace *tracePtr;
+    VarTrace *tracePtr;
     int new;
 
     /*
@@ -934,7 +934,7 @@ Tcl_UntraceVar(
     Tcl_VarTraceProc *proc,	/* Procedure assocated with trace. */
     ClientData clientData	/* Arbitrary argument to pass to proc. */)
 {
-    register char *p;
+    char *p;
 
     /*
      * If varName refers to an array (it ends with a parenthesized
@@ -997,7 +997,7 @@ Tcl_UntraceVar2(
     Tcl_VarTraceProc *proc,	/* Procedure assocated with trace. */
     ClientData clientData	/* Arbitrary argument to pass to proc. */)
 {
-    register VarTrace *tracePtr;
+    VarTrace *tracePtr;
     VarTrace *prevPtr;
     Var *varPtr;
     Interp *iPtr = (Interp *) interp;
@@ -1103,7 +1103,7 @@ Tcl_VarTraceInfo(
 				 * If NULL, this call will return the
 				 * first trace. */)
 {
-    register char *p;
+    char *p;
 
     /*
      * If varName refers to an array (it ends with a parenthesized
@@ -1169,7 +1169,7 @@ Tcl_VarTraceInfo2(
 				 * If NULL, this call will return the
 				 * first trace. */)
 {
-    register VarTrace *tracePtr;
+    VarTrace *tracePtr;
     Var *varPtr;
     Interp *iPtr = (Interp *) interp;
     Tcl_HashEntry *hPtr;
@@ -1245,7 +1245,7 @@ Tcl_VarTraceInfo2(
 int
 Tcl_SetCmd(
     ClientData dummy,			/* Not used. */
-    register Tcl_Interp *interp,	/* Current interpreter. */
+    Tcl_Interp *interp,	/* Current interpreter. */
     int argc,				/* Number of arguments. */
     char **argv				/* Argument strings. */)
 {
@@ -1295,7 +1295,7 @@ Tcl_SetCmd(
 int
 Tcl_UnsetCmd(
     ClientData dummy,			/* Not used. */
-    register Tcl_Interp *interp,	/* Current interpreter. */
+    Tcl_Interp *interp,	/* Current interpreter. */
     int argc,				/* Number of arguments. */
     char **argv				/* Argument strings. */)
 {
@@ -1335,7 +1335,7 @@ Tcl_UnsetCmd(
 int
 Tcl_AppendCmd(
     ClientData dummy,			/* Not used. */
-    register Tcl_Interp *interp,	/* Current interpreter. */
+    Tcl_Interp *interp,	/* Current interpreter. */
     int argc,				/* Number of arguments. */
     char **argv				/* Argument strings. */)
 {
@@ -1381,7 +1381,7 @@ Tcl_AppendCmd(
 int
 Tcl_LappendCmd(
     ClientData dummy,			/* Not used. */
-    register Tcl_Interp *interp,	/* Current interpreter. */
+    Tcl_Interp *interp,	/* Current interpreter. */
     int argc,				/* Number of arguments. */
     char **argv				/* Argument strings. */)
 {
@@ -1427,7 +1427,7 @@ Tcl_LappendCmd(
 int
 Tcl_ArrayCmd(
     ClientData dummy,			/* Not used. */
-    register Tcl_Interp *interp,	/* Current interpreter. */
+    Tcl_Interp *interp,	/* Current interpreter. */
     int argc,				/* Number of arguments. */
     char **argv				/* Argument strings. */)
 {
@@ -1658,7 +1658,7 @@ Tcl_GlobalCmd(
     char **argv				/* Argument strings. */)
 {
     Var *varPtr, *gVarPtr;
-    register Interp *iPtr = (Interp *) interp;
+    Interp *iPtr = (Interp *) interp;
     Tcl_HashEntry *hPtr, *hPtr2;
     int new;
 
@@ -1726,7 +1726,7 @@ Tcl_UpvarCmd(
     int argc,				/* Number of arguments. */
     char **argv				/* Argument strings. */)
 {
-    register Interp *iPtr = (Interp *) interp;
+    Interp *iPtr = (Interp *) interp;
     int result;
     CallFrame *framePtr;
     Var *varPtr = NULL;
@@ -1832,7 +1832,7 @@ TclDeleteVars(
 {
     Tcl_HashSearch search;
     Tcl_HashEntry *hPtr;
-    register Var *varPtr;
+    Var *varPtr;
     int flags, globalFlag;
 
     flags = TCL_TRACE_UNSETS;
@@ -1922,7 +1922,7 @@ TclDeleteVars(
 static char *
 CallTraces(
     Interp *iPtr,			/* Interpreter containing variable. */
-    register Var *arrayPtr,		/* Pointer to array variable that
+    Var *arrayPtr,		/* Pointer to array variable that
 					 * contains the variable, or NULL if
 					 * the variable isn't an element of an
 					 * array. */
@@ -1937,7 +1937,7 @@ CallTraces(
 					 * TCL_INTERP_DESTROYED. */)
 {
     Var *varPtr;
-    register VarTrace *tracePtr;
+    VarTrace *tracePtr;
     ActiveVarTrace active;
     char *result;
     int savedArrayFlags = 0;		/* (Initialization not needed except
@@ -2049,7 +2049,7 @@ NewVar(
 			 * for variable's value. */)
 {
     int extra;
-    register Var *varPtr;
+    Var *varPtr;
 
     extra = space - sizeof(varPtr->value);
     if (extra < 0) {
@@ -2156,7 +2156,7 @@ ParseSearchId(
 
 static void
 DeleteSearches(
-    register Var *arrayVarPtr		/* Variable whose searches are
+    Var *arrayVarPtr		/* Variable whose searches are
 					 * to be deleted. */)
 {
     ArraySearch *searchPtr;
@@ -2201,8 +2201,8 @@ DeleteArray(
 					 * TCL_GLOBAL_ONLY. */)
 {
     Tcl_HashSearch search;
-    register Tcl_HashEntry *hPtr;
-    register Var *elPtr;
+    Tcl_HashEntry *hPtr;
+    Var *elPtr;
 
     DeleteSearches(varPtr);
     for (hPtr = Tcl_FirstHashEntry(varPtr->value.tablePtr, &search);

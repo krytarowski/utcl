@@ -258,7 +258,7 @@ Tcl_WaitPids(
     int *statusPtr		/* Wait status is returned here. */)
 {
     int i, count, pid;
-    register WaitInfo *waitPtr;
+    WaitInfo *waitPtr;
     int anyProcesses;
     WAIT_STATUS_TYPE status;
 
@@ -366,7 +366,7 @@ Tcl_DetachPids(
     int *pidPtr			/* Array of pids to detach:  must have
 				 * been created by Tcl_Fork. */)
 {
-    register WaitInfo *waitPtr;
+    WaitInfo *waitPtr;
     int i, count, pid;
 
     for (i = 0; i < numPids; i++) {
